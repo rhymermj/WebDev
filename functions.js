@@ -26,9 +26,40 @@ function factorial(num){
     return n;
 }
 
+function factorialSolution(num){
+    // define a result variable
+    var result = 1;
+
+    // calculate factorial and store value in result
+    for(var i = 2; i <= num; i++){
+        result = result * i;
+    }
+    // return the result variable;
+    return result;
+}
+
+function factorialByDecrement(num){
+    /* if set condition i >= 1 in for loop below
+    if( num === 0){
+        return 1;
+    }
+    */
+    var result = num;
+    for(var i = num-1; i > 0; i--){
+        result = result * i;
+    }
+    return result;
+}
+
 console.log("kebabToSnake");
 
 function kebabToSnake(str){
-    newStr = str.replace("-", "_");
+    var newStr = str.replace("-", "_");
+    return newStr;
+}
+
+function kebabToSnakeSolution(str){
+    // replace whatever character between the slashes with newchar ("_")
+    var newStr = str.replace(/-/g, "_");
     return newStr;
 }
