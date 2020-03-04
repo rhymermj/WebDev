@@ -53,11 +53,13 @@ function factorialByDecrement(num){
 
 console.log("kebabToSnake");
 
+// This function is INCORRECT since it ONLY replaces the FIRST DASH 
 function kebabToSnake(str){
     var newStr = str.replace("-", "_");
     return newStr;
 }
 
+// Performs global replacement
 function kebabToSnakeSolution(str){
     // replace whatever character between the slashes with newchar ("_")
     var newStr = str.replace(/-/g, "_");
